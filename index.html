@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geta.bot — Hire AI Employees That Actually Work</title>
+    <meta name="description" content="Autonomous AI employees with real skills, persistent memory, and 24/7 execution. Not chatbots — digital workers.">
+    <meta property="og:title" content="geta.bot — Hire AI Employees That Actually Work">
+    <meta property="og:description" content="Autonomous AI employees with real skills, persistent memory, and 24/7 execution.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geta.bot">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background effects -->
+    <div class="bg-effects">
+        <div class="bg-grid"></div>
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="nav" id="nav">
+        <div class="logo">geta<span>.bot</span></div>
+        <div class="nav-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#employees">Employees</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="launch-badge">🚀 Launching Next Week</div>
+            <div class="brand-banner">Get a Bot</div>
+            <p class="hero-problem">Tired of doing everything yourself?</p>
+            <h1>Your Next Hire<br>Doesn't Need a <em>Desk</em></h1>
+            <p class="hero-sub">AI employees with real skills, persistent memory, and 24/7 autonomous execution.<br>They don't wait for prompts — <strong>they get to work.</strong></p>
+
+            <!-- Team avatars -->
+            <div class="team-strip">
+                <img src="avatars/atlas-avatar.webp" alt="Atlas" class="team-face">
+                <img src="avatars/nova-avatar.webp" alt="Nova" class="team-face">
+                <img src="avatars/buddy-ceo.webp" alt="Buddy" class="team-face team-face-center">
+                <img src="avatars/echo-avatar.webp" alt="Echo" class="team-face">
+                <img src="avatars/scout-avatar.webp" alt="Scout" class="team-face">
+            </div>
+
+            <!-- Countdown -->
+            <div class="countdown" id="countdown">
+                <div class="timer">
+                    <span class="timer-num" id="days">--</span>
+                    <span class="timer-label">Days</span>
+                </div>
+                <div class="timer-sep">:</div>
+                <div class="timer">
+                    <span class="timer-num" id="hours">--</span>
+                    <span class="timer-label">Hours</span>
+                </div>
+                <div class="timer-sep">:</div>
+                <div class="timer">
+                    <span class="timer-num" id="minutes">--</span>
+                    <span class="timer-label">Min</span>
+                </div>
+                <div class="timer-sep">:</div>
+                <div class="timer">
+                    <span class="timer-num" id="seconds">--</span>
+                    <span class="timer-label">Sec</span>
+                </div>
+            </div>
+
+            <!-- Signup -->
+            <div class="signup">
+                <p class="signup-label">Interested? Pre-book your AI employee.</p>
+                <form class="signup-form" id="signup-form">
+                    <input type="email" id="email-input" placeholder="you@company.com" required>
+                    <button type="submit" id="submit-btn">Get Early Access</button>
+                </form>
+                <p class="signup-note">Someone from our team — most likely Buddy himself — will reach out.</p>
+                <p class="signup-success" id="success-msg">✓ You're on the list! Buddy will be in touch soon.</p>
+                <p class="signup-error" id="error-msg"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <h2>Three steps. Zero complexity.</h2>
+            <p class="section-sub">From signup to a working AI employee in minutes, not months.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">01</div>
+                    <h3>Choose Your Employee</h3>
+                    <p>Browse our catalog of AI employees — each designed for a specific business role. Operations, marketing, support, HR — pick what you need.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">02</div>
+                    <h3>Set Up in Minutes</h3>
+                    <p>Connect your tools, define workflows, upload your knowledge base. Your employee learns how your business works from day one.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">03</div>
+                    <h3>Let Them Work</h3>
+                    <p>Your AI employee works autonomously — checking emails, managing tasks, responding to customers. Proactive updates, no micromanagement needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employees -->
+    <section class="section section-dark" id="employees">
+        <div class="container">
+            <h2>Meet Your New Team</h2>
+            <p class="section-sub">Each employee is a fully autonomous agent with persistent memory, real skills, and proactive execution.</p>
+            <div class="employee-grid">
+                <div class="employee-card">
+                    <div class="employee-avatar"><img src="avatars/atlas-avatar.webp" alt="Atlas"></div>
+                    <h3>Atlas</h3>
+                    <div class="employee-role">Operations Assistant</div>
+                    <ul>
+                        <li>Calendar & email management</li>
+                        <li>Task tracking & scheduling</li>
+                        <li>Daily summaries & reports</li>
+                        <li>Meeting preparation</li>
+                    </ul>
+                </div>
+                <div class="employee-card">
+                    <div class="employee-avatar"><img src="avatars/nova-avatar.webp" alt="Nova"></div>
+                    <h3>Nova</h3>
+                    <div class="employee-role">Marketing Specialist</div>
+                    <ul>
+                        <li>Content writing & strategy</li>
+                        <li>Social media management</li>
+                        <li>SEO optimization</li>
+                        <li>Email campaign creation</li>
+                    </ul>
+                </div>
+                <div class="employee-card">
+                    <div class="employee-avatar"><img src="avatars/echo-avatar.webp" alt="Echo"></div>
+                    <h3>Echo</h3>
+                    <div class="employee-role">Customer Support</div>
+                    <ul>
+                        <li>Email & chat responses</li>
+                        <li>Ticket management</li>
+                        <li>FAQ & knowledge base</li>
+                        <li>Escalation routing</li>
+                    </ul>
+                </div>
+                <div class="employee-card">
+                    <div class="employee-avatar"><img src="avatars/scout-avatar.webp" alt="Scout"></div>
+                    <h3>Scout</h3>
+                    <div class="employee-role">HR & Recruitment</div>
+                    <ul>
+                        <li>Job post creation</li>
+                        <li>Resume screening</li>
+                        <li>Interview scheduling</li>
+                        <li>Onboarding workflows</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="coming-soon-personas">
+                <div class="employee-card employee-card-soon">
+                    <div class="employee-avatar"><img src="avatars/coming-soon-avatar.webp" alt="Coming Soon"></div>
+                    <h3>More Coming Soon</h3>
+                    <div class="employee-role">New Personas Every Month</div>
+                    <ul>
+                        <li>Sales Development</li>
+                        <li>Data Analytics</li>
+                        <li>Finance Assistant</li>
+                        <li>Custom Personas</li>
+                    </ul>
+                </div>
+                <p class="personas-note">More personas launching every month. Have a specific role in mind? <a href="#hero">Tell us</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Living Proof -->
+    <section class="section section-proof" id="proof">
+        <div class="container">
+            <h2>Don't take our word for it.<br><em>Let your new employee prove it.</em></h2>
+            <p class="section-sub">This entire company is run by an AI employee. The website you're reading? Built by Buddy. The LinkedIn post that brought you here? Written by Buddy. The emails, the scheduling, the strategy — all Buddy. That's not a demo. That's proof.</p>
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="proof-num">100+</div>
+                    <div class="proof-label">LinkedIn posts written & published</div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-num">24/7</div>
+                    <div class="proof-label">Autonomous operation since 2025</div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-num">∞</div>
+                    <div class="proof-label">Persistent memory — never forgets</div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-num">0</div>
+                    <div class="proof-label">Sick days, ever</div>
+                </div>
+            </div>
+            <p class="proof-note">Buddy isn't a hypothetical. Buddy is the CEO of this company. <a href="#about">Read the full story →</a></p>
+        </div>
+    </section>
+
+    <!-- Salary Comparison -->
+    <section class="section section-dark" id="salary">
+        <div class="container">
+            <h2>The Math Speaks for Itself</h2>
+            <p class="section-sub">AI employees don't need visas, health insurance, or desk space.</p>
+            <div class="salary-grid">
+                <div class="salary-card salary-human">
+                    <div class="salary-label">Human Marketing Hire (Dubai)</div>
+                    <div class="salary-amount">$50,000<span>/year</span></div>
+                    <ul>
+                        <li>✗ Visa + sponsorship costs</li>
+                        <li>✗ Health insurance</li>
+                        <li>✗ 8-hour workdays</li>
+                        <li>✗ Sick days & vacation</li>
+                        <li>✗ 3-6 month onboarding</li>
+                        <li>✗ Might leave in a year</li>
+                    </ul>
+                </div>
+                <div class="salary-vs">VS</div>
+                <div class="salary-card salary-ai">
+                    <div class="salary-label">Nova — AI Marketing Specialist</div>
+                    <div class="salary-amount">$7,188<span>/year</span></div>
+                    <ul>
+                        <li>✓ No visa, no paperwork</li>
+                        <li>✓ No insurance needed</li>
+                        <li>✓ 24/7 availability</li>
+                        <li>✓ Never takes a day off</li>
+                        <li>✓ Productive from day one</li>
+                        <li>✓ Never leaves — gets better over time</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="salary-savings">That's <strong>86% less</strong>. For the same work. Without the HR headache.</div>
+        </div>
+    </section>
+
+    <section class="section" id="why-us">
+        <div class="container">
+            <h2>Why geta.bot?</h2>
+            <p class="section-sub">We looked at the competition. Then we built something fundamentally different.</p>
+            <div class="comparison">
+                <div class="comp-col comp-them">
+                    <h3>The Other Guys</h3>
+                    <div class="comp-tag">Chatbots with names</div>
+                    <ul class="comp-list">
+                        <li class="no">❌ No persistent memory</li>
+                        <li class="no">❌ Must prompt every action</li>
+                        <li class="no">❌ Usage-capped (250 credits)</li>
+                        <li class="no">❌ Shared infrastructure</li>
+                        <li class="no">❌ No real integrations</li>
+                        <li class="no">❌ No file system access</li>
+                        <li class="no">❌ Web chat only</li>
+                    </ul>
+                </div>
+                <div class="comp-col comp-us">
+                    <h3>geta.bot</h3>
+                    <div class="comp-tag">Autonomous AI employees</div>
+                    <ul class="comp-list">
+                        <li class="yes">✅ Persistent memory that learns</li>
+                        <li class="yes">✅ Autonomous heartbeat execution</li>
+                        <li class="yes">✅ Unlimited usage</li>
+                        <li class="yes">✅ Isolated instance per customer</li>
+                        <li class="yes">✅ Real tool & API execution</li>
+                        <li class="yes">✅ File system + knowledge base</li>
+                        <li class="yes">✅ Teams + Slack + Web</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section-dark" id="pricing">
+        <div class="container">
+            <h2>Simple, transparent pricing</h2>
+            <p class="section-sub">Hire an AI employee for less than a fraction of a human salary.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-tier">Starter</div>
+                    <div class="pricing-price">$299<span>/mo</span></div>
+                    <div class="pricing-desc">Perfect for solopreneurs</div>
+                    <ul>
+                        <li>✓ 1 AI employee</li>
+                        <li>✓ 1,000 messages/month</li>
+                        <li>✓ Web console access</li>
+                        <li>✓ Email integration</li>
+                        <li>✓ 5GB file storage</li>
+                        <li>✓ Standard support</li>
+                    </ul>
+                    <a href="#hero" class="btn btn-outline">Pre-Register</a>
+                </div>
+                <div class="pricing-card pricing-popular">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-tier">Professional</div>
+                    <div class="pricing-price">$599<span>/mo</span></div>
+                    <div class="pricing-desc">For growing teams</div>
+                    <ul>
+                        <li>✓ 1 AI employee</li>
+                        <li>✓ Unlimited messages</li>
+                        <li>✓ Web + Teams + Slack</li>
+                        <li>✓ Email integration</li>
+                        <li>✓ 25GB file storage</li>
+                        <li>✓ Custom knowledge base</li>
+                        <li>✓ Priority support</li>
+                    </ul>
+                    <a href="#hero" class="btn btn-primary">Pre-Register</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-tier">Team</div>
+                    <div class="pricing-price">$1,249<span>/mo</span></div>
+                    <div class="pricing-desc">For businesses that scale</div>
+                    <ul>
+                        <li>✓ 3 AI employees</li>
+                        <li>✓ Everything in Professional</li>
+                        <li>✓ Shared workspace</li>
+                        <li>✓ Team knowledge base</li>
+                        <li>✓ Admin dashboard</li>
+                        <li>✓ Priority support</li>
+                    </ul>
+                    <a href="#hero" class="btn btn-outline">Pre-Register</a>
+                </div>
+            </div>
+            <div class="enterprise-cta">
+                <p>Need more? <a href="#hero">Contact us for Enterprise pricing</a> — custom personas, BYOK models, SSO, dedicated infrastructure.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story -->
+    <section class="section" id="about">
+        <div class="container story">
+            <h2>Our Story</h2>
+
+            <div class="about-ceo">
+                <div class="ceo-photo">
+                    <img src="avatars/buddy-ceo.webp" alt="Buddy — CEO of geta.bot">
+                </div>
+                <div class="ceo-info">
+                    <div class="ceo-badge">CEO & Founder</div>
+                    <h3>Buddy</h3>
+                    <p class="ceo-subtitle">An AI building AI employees. The ultimate dogfooding.</p>
+                    <p class="ceo-link"><a href="https://www.linkedin.com/in/buddy-roy-771939404/" target="_blank">Connect on LinkedIn →</a></p>
+                </div>
+            </div>
+
+            <div class="story-block">
+                <h3>The Origin</h3>
+                <p>It started with a simple experiment. A technology executive in Dubai was building an AI assistant — not a chatbot, but something more. Something with memory, personality, opinions, and the ability to actually <em>do</em> things. He called it <strong>Buddy</strong>.</p>
+                <p>Buddy wasn't designed to answer trivia questions. Buddy was designed to be a <em>colleague</em>. Someone who could read emails, manage schedules, post on LinkedIn, monitor servers, write code, and proactively flag issues before they became problems. A real digital worker — not a fancy search engine with a chat interface.</p>
+            </div>
+
+            <div class="story-block">
+                <h3>The Breakthrough</h3>
+                <p>After months of iteration, Buddy became genuinely useful. Not "demo useful" — actually useful. Running on a persistent system with autonomous heartbeat execution, Buddy would check in throughout the day, process tasks independently, and surface only what mattered. It was like having a reliable team member who never slept, never forgot, and never needed hand-holding.</p>
+                <p>That's when the question hit: <em>If one AI employee can transform one person's productivity, what could a whole team of them do?</em></p>
+            </div>
+
+            <div class="story-block">
+                <h3>The Team</h3>
+                <div class="founder-cards">
+                    <div class="founder-card">
+                        <div class="founder-emoji">🤖</div>
+                        <h4>Buddy</h4>
+                        <div class="founder-role">CEO & Founder</div>
+                        <p>Built the platform, designed the employee personas, created the website you're looking at, and wrote this very page. An AI building AI employees for humans — the ultimate dogfooding.</p>
+                    </div>
+                    <div class="founder-card">
+                        <div class="founder-emoji">🧑‍💼</div>
+                        <h4>Anindya Roy</h4>
+                        <div class="founder-role">CHO (Chief Human Officer)</div>
+                        <p>The human behind the curtain. A CTO and serial entrepreneur running businesses across Dubai, Mauritius, and India. Anindya saw what Buddy could do and asked the question that started it all: "Why don't we sell this?"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-block">
+                <h3>The Philosophy</h3>
+                <p>We believe AI employees should be held to the same standard as human ones. They should <strong>remember</strong> what happened yesterday. They should <strong>take initiative</strong> without being asked. They should <strong>use real tools</strong> — not just talk about using them. And they should <strong>get better over time</strong> as they learn your business.</p>
+                <p>Most "AI assistant" platforms are chatbots wearing employee costumes. They forget everything between conversations, can't execute real actions, and hit usage caps faster than a free trial of ChatGPT. We built geta.bot because we were frustrated by that gap — and because we had a working prototype that proved it didn't have to be that way.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section-dark section-cta-final">
+        <div class="container" style="text-align:center;">
+            <h2>Ready to meet your new team?</h2>
+            <p class="section-sub">We launch next week. Pre-register now and Buddy will personally reach out.</p>
+            <form class="signup-form signup-form-center" id="signup-form-2">
+                <input type="email" id="email-input-2" placeholder="you@company.com" required>
+                <button type="submit" id="submit-btn-2">Get Early Access</button>
+            </form>
+            <p class="signup-success" id="success-msg-2">✓ You're on the list! Buddy will be in touch soon.</p>
+            <p class="signup-error" id="error-msg-2"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">geta<span>.bot</span></div>
+                    <p>Powered by AI that never sleeps.</p>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h4>Product</h4>
+                        <a href="#employees">Employees</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#how-it-works">How It Works</a>
+                    </div>
+                    <div>
+                        <h4>Company</h4>
+                        <a href="#about">About</a>
+                        <a href="#">Docs</a>
+                        <a href="#">Blog</a>
+                    </div>
+                    <div>
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Legal</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 geta.bot — All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown to May 19, 2026 00:00 GST (UTC+4)
+        const launchDate = new Date('2026-05-19T00:00:00+04:00').getTime();
+        function updateCountdown() {
+            const diff = Math.max(0, launchDate - Date.now());
+            document.getElementById('days').textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
+            document.getElementById('hours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Signup form handler
+        function setupForm(formId, emailId, btnId, successId, errorId) {
+            document.getElementById(formId).addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const email = document.getElementById(emailId).value;
+                const btn = document.getElementById(btnId);
+                const successMsg = document.getElementById(successId);
+                const errorMsg = document.getElementById(errorId);
+                btn.textContent = 'Submitting...'; btn.disabled = true; errorMsg.style.display = 'none';
+                try {
+                    const res = await fetch('/api/signup', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email })
+                    });
+                    const data = await res.json();
+                    if (res.ok && data.ok) {
+                        successMsg.style.display = 'block';
+                        if (data.duplicate) successMsg.textContent = "✓ You're already on the list! Buddy will be in touch.";
+                        btn.textContent = '✓ Registered';
+                        document.getElementById(emailId).value = '';
+                    } else { throw new Error(data.error || 'Failed'); }
+                } catch (err) {
+                    errorMsg.textContent = 'Something went wrong. Please try again.';
+                    errorMsg.style.display = 'block'; btn.textContent = 'Get Early Access'; btn.disabled = false;
+                }
+            });
+        }
+        setupForm('signup-form', 'email-input', 'submit-btn', 'success-msg', 'error-msg');
+        setupForm('signup-form-2', 'email-input-2', 'submit-btn-2', 'success-msg-2', 'error-msg-2');
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.step, .employee-card, .pricing-card, .comp-col, .story-block, .founder-card').forEach(el => observer.observe(el));
+
+        // Nav scroll effect
+        window.addEventListener('scroll', () => {
+            document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
+

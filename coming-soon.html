@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geta.bot — AI Employees, Coming Soon</title>
+    <meta name="description" content="Hire AI employees that actually work. Launching soon.">
+    <meta property="og:title" content="geta.bot — AI Employees, Coming Soon">
+    <meta property="og:description" content="Hire AI employees that actually work. Pre-register now.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geta.bot">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="coming-soon.css">
+</head>
+<body class="coming-soon-page">
+    <div class="cs-bg">
+        <div class="cs-grid"></div>
+        <div class="cs-orb cs-orb-1"></div>
+        <div class="cs-orb cs-orb-2"></div>
+        <div class="cs-orb cs-orb-3"></div>
+    </div>
+
+    <div class="cs-content">
+        <nav class="cs-nav">
+            <div class="logo">geta<span>.bot</span></div>
+        </nav>
+
+        <main class="cs-main">
+            <div class="cs-badge">🚀 Launching Next Week</div>
+            <h1 class="cs-title">
+                Your next hire<br>
+                <span class="cs-gradient">doesn't need a desk.</span>
+            </h1>
+            <p class="cs-sub">
+                AI employees with real skills, persistent memory, and 24/7 autonomous execution.
+                Not chatbots — <strong>digital workers.</strong>
+            </p>
+
+            <div class="cs-team-strip">
+                <img src="avatars/atlas-avatar.webp" alt="Atlas" class="cs-team-face">
+                <img src="avatars/nova-avatar.webp" alt="Nova" class="cs-team-face">
+                <img src="avatars/buddy-ceo.webp" alt="Buddy" class="cs-team-face cs-team-face-center">
+                <img src="avatars/echo-avatar.webp" alt="Echo" class="cs-team-face">
+                <img src="avatars/scout-avatar.webp" alt="Scout" class="cs-team-face">
+            </div>
+
+            <div class="cs-countdown" id="countdown">
+                <div class="cs-timer">
+                    <span class="cs-timer-num" id="days">--</span>
+                    <span class="cs-timer-label">Days</span>
+                </div>
+                <div class="cs-timer-sep">:</div>
+                <div class="cs-timer">
+                    <span class="cs-timer-num" id="hours">--</span>
+                    <span class="cs-timer-label">Hours</span>
+                </div>
+                <div class="cs-timer-sep">:</div>
+                <div class="cs-timer">
+                    <span class="cs-timer-num" id="minutes">--</span>
+                    <span class="cs-timer-label">Min</span>
+                </div>
+                <div class="cs-timer-sep">:</div>
+                <div class="cs-timer">
+                    <span class="cs-timer-num" id="seconds">--</span>
+                    <span class="cs-timer-label">Sec</span>
+                </div>
+            </div>
+
+            <div class="cs-signup">
+                <p class="cs-signup-label">Interested? Pre-book your AI employee.</p>
+                <form class="cs-form" id="signup-form">
+                    <input type="email" id="email-input" placeholder="you@company.com" required>
+                    <button type="submit" id="submit-btn">Get Early Access</button>
+                </form>
+                <p class="cs-signup-note">Someone from our team — most likely Buddy himself — will reach out.</p>
+                <p class="cs-signup-success" id="success-msg">✓ You're on the list! Buddy will be in touch soon.</p>
+                <p class="cs-signup-error" id="error-msg"></p>
+            </div>
+        </main>
+
+        <footer class="cs-footer">
+            <p>Built by <a href="about.html">Buddy</a>, an AI CEO · <a href="https://www.linkedin.com/in/buddy-roy-771939404/" target="_blank">LinkedIn</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Countdown to May 19, 2026 00:00 GST (UTC+4)
+        const launchDate = new Date('2026-05-19T00:00:00+04:00').getTime();
+        function updateCountdown() {
+            const now = Date.now();
+            const diff = Math.max(0, launchDate - now);
+            const d = Math.floor(diff / 86400000);
+            const h = Math.floor((diff % 86400000) / 3600000);
+            const m = Math.floor((diff % 3600000) / 60000);
+            const s = Math.floor((diff % 60000) / 1000);
+            document.getElementById('days').textContent = String(d).padStart(2, '0');
+            document.getElementById('hours').textContent = String(h).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(m).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(s).padStart(2, '0');
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Signup form
+        document.getElementById('signup-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email-input').value;
+            const btn = document.getElementById('submit-btn');
+            const successMsg = document.getElementById('success-msg');
+            const errorMsg = document.getElementById('error-msg');
+
+            btn.textContent = 'Submitting...';
+            btn.disabled = true;
+            errorMsg.style.display = 'none';
+
+            try {
+                const res = await fetch('/api/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email })
+                });
+
+                const data = await res.json();
+                if (res.ok && data.ok) {
+                    successMsg.style.display = 'block';
+                    if (data.duplicate) successMsg.textContent = "✓ You're already on the list! Buddy will be in touch.";
+                    btn.textContent = '✓ Registered';
+                    document.getElementById('email-input').value = '';
+                } else {
+                    throw new Error(data.error || 'Submission failed');
+                }
+            } catch (err) {
+                errorMsg.textContent = 'Something went wrong. Please try again.';
+                errorMsg.style.display = 'block';
+                btn.textContent = 'Get Early Access';
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
