@@ -12,8 +12,8 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Bits:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="launch.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Background effects -->
@@ -30,7 +30,7 @@
         <div class="nav-links">
             <a href="#how-it-works">How It Works</a>
             <a href="#employees">Employees</a>
-            <a href="#pricing">Early Access</a>
+            <a href="#pricing">Pricing</a>
             <a href="#about">About</a>
         </div>
     </nav>
@@ -38,11 +38,11 @@
     <!-- Hero -->
     <section class="hero" id="hero">
         <div class="hero-content">
-            <div class="launch-badge">🚀 Early Access — Live Now</div>
+            <div class="launch-badge">🤖 Early Access — Free for 30 Days</div>
             <div class="brand-banner">Get a Bot</div>
             <p class="hero-problem">Tired of doing everything yourself?</p>
-            <h1>Your Next Hire<br>Doesn't Need a <em>Desk</em></h1>
-            <p class="hero-sub">AI employees with real skills, persistent memory, and 24/7 autonomous execution.<br><strong>Limited early access — free for the first month.</strong></p>
+            <h1>Hire AI Employees.<br>Start <em>Free</em> Today.</h1>
+            <p class="hero-sub">No credit card required. Chat with your AI employee and see what autonomous really means.<br>They don't wait for prompts — <strong>they get to work.</strong></p>
 
             <!-- Team avatars -->
             <div class="team-strip">
@@ -53,14 +53,14 @@
                 <img src="avatars/scout-avatar.webp" alt="Scout" class="team-face">
             </div>
 
-            <!-- Signup (no countdown — we're live) -->
+            <!-- Signup -->
             <div class="signup">
-                <p class="signup-label">Enter your email to get started — free 1-month access.</p>
+                <p class="signup-label">Get your AI employee. Free for 30 days.</p>
                 <form class="signup-form" id="signup-form">
                     <input type="email" id="email-input" placeholder="you@company.com" required>
-                    <button type="submit" id="submit-btn">Get Early Access</button>
+                    <button type="submit" id="submit-btn">Start Free Trial</button>
                 </form>
-                <p class="signup-note">Free for the first month. No credit card required.</p>
+                <p class="signup-note">Someone from our team — most likely Buddy himself — will reach out.</p>
                 <p class="signup-success" id="success-msg">✓ Welcome aboard! Buddy will set up your AI employee within 24 hours.</p>
                 <p class="signup-error" id="error-msg"></p>
             </div>
@@ -258,20 +258,59 @@
         </div>
     </section>
 
-    <!-- Early Access CTA (replacing pricing) -->
+    <!-- Pricing -->
     <section class="section section-dark" id="pricing">
-        <div class="container" style="text-align:center;">
-            <h2>Free Early Access</h2>
-            <p class="section-sub">We're onboarding companies for free. Full access to your AI employee — no credit card, no limits — for the entire first month.</p>
-            <div style="max-width:440px;margin:32px auto 0;">
-                <p class="signup-label">Enter your email to join the waitlist.</p>
-                <form class="signup-form" id="form-cta" onsubmit="return false;">
-                    <input type="email" id="email-cta" placeholder="you@company.com" required>
-                    <button type="submit" id="btn-cta">Join Waitlist</button>
-                </form>
-                <p class="signup-success" id="success-cta">✓ You're on the list! We'll reach out soon.</p>
-                <p class="signup-error" id="error-cta">Something went wrong. Please try again.</p>
-                <p class="signup-note">Free for the first month. No credit card required.</p>
+        <div class="container">
+            <h2>Early Access — Free for 30 Days</h2>
+            <p class="section-sub">Try any plan free. No credit card required.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-tier">Starter</div>
+                    <div class="pricing-price">Free<span>/30 days, then $299/mo</span></div>
+                    <div class="pricing-desc">Perfect for solopreneurs</div>
+                    <ul>
+                        <li>✓ 1 AI employee</li>
+                        <li>✓ 1,000 messages/month</li>
+                        <li>✓ Web console access</li>
+                        <li>✓ Email integration</li>
+                        <li>✓ 5GB file storage</li>
+                        <li>✓ Standard support</li>
+                    </ul>
+                    <a href="#hero" class="btn btn-outline">Start Free Trial</a>
+                </div>
+                <div class="pricing-card pricing-popular">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-tier">Professional</div>
+                    <div class="pricing-price">Free<span>/30 days, then $599/mo</span></div>
+                    <div class="pricing-desc">For growing teams</div>
+                    <ul>
+                        <li>✓ 1 AI employee</li>
+                        <li>✓ Unlimited messages</li>
+                        <li>✓ Web + Teams + Slack</li>
+                        <li>✓ Email integration</li>
+                        <li>✓ 25GB file storage</li>
+                        <li>✓ Custom knowledge base</li>
+                        <li>✓ Priority support</li>
+                    </ul>
+                    <a href="#hero" class="btn btn-primary">Start Free Trial</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-tier">Team</div>
+                    <div class="pricing-price">Free<span>/30 days, then $1,249/mo</span></div>
+                    <div class="pricing-desc">For businesses that scale</div>
+                    <ul>
+                        <li>✓ 3 AI employees</li>
+                        <li>✓ Everything in Professional</li>
+                        <li>✓ Shared workspace</li>
+                        <li>✓ Team knowledge base</li>
+                        <li>✓ Admin dashboard</li>
+                        <li>✓ Priority support</li>
+                    </ul>
+                    <a href="#hero" class="btn btn-outline">Start Free Trial</a>
+                </div>
+            </div>
+            <div class="enterprise-cta">
+                <p>Need more? <a href="#hero">Contact us for Enterprise pricing</a> — custom personas, BYOK models, SSO, dedicated infrastructure.</p>
             </div>
         </div>
     </section>
@@ -335,12 +374,12 @@
     <section class="section section-dark section-cta-final">
         <div class="container" style="text-align:center;">
             <h2>Ready to meet your new team?</h2>
-            <p class="section-sub">Free early access — no credit card, no limits. Your AI employee starts today.</p>
+            <p class="section-sub">We launch next week. Pre-register now and Buddy will personally reach out.</p>
             <form class="signup-form signup-form-center" id="signup-form-2">
                 <input type="email" id="email-input-2" placeholder="you@company.com" required>
                 <button type="submit" id="submit-btn-2">Get Early Access</button>
             </form>
-            <p class="signup-success" id="success-msg-2">✓ You're on the list! Buddy will be in touch soon.</p>
+            <p class="signup-success" id="success-msg-2">✓ Welcome aboard! Buddy will set up your AI employee within 24 hours.</p>
             <p class="signup-error" id="error-msg-2"></p>
         </div>
     </section>
@@ -357,7 +396,7 @@
                     <div>
                         <h4>Product</h4>
                         <a href="#employees">Employees</a>
-                        <a href="#pricing">Early Access</a>
+                        <a href="#pricing">Pricing</a>
                         <a href="#how-it-works">How It Works</a>
                     </div>
                     <div>
@@ -381,7 +420,7 @@
     </footer>
 
     <script>
-        // Countdown removed — we're live!
+        // Countdown removed — early access is live
         // Signup form handler
         function setupForm(formId, emailId, btnId, successId, errorId) {
             document.getElementById(formId).addEventListener('submit', async function(e) {
@@ -412,7 +451,6 @@
         }
         setupForm('signup-form', 'email-input', 'submit-btn', 'success-msg', 'error-msg');
         setupForm('signup-form-2', 'email-input-2', 'submit-btn-2', 'success-msg-2', 'error-msg-2');
-        setupForm('form-cta', 'email-cta', 'btn-cta', 'success-cta', 'error-cta');
 
         // Scroll animations
         const observer = new IntersectionObserver((entries) => {

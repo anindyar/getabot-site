@@ -38,7 +38,7 @@
     <!-- Hero -->
     <section class="hero" id="hero">
         <div class="hero-content">
-            <div class="launch-badge">🚀 Early Access Launching May 19</div>
+            <div class="launch-badge">🚀 Early Access — Live Now</div>
             <div class="brand-banner">Get a Bot</div>
             <p class="hero-problem">Tired of doing everything yourself?</p>
             <h1>Your Next Hire<br>Doesn't Need a <em>Desk</em></h1>
@@ -53,38 +53,15 @@
                 <img src="avatars/scout-avatar.webp" alt="Scout" class="team-face">
             </div>
 
-            <!-- Countdown -->
-            <div class="countdown" id="countdown">
-                <div class="timer">
-                    <span class="timer-num" id="days">--</span>
-                    <span class="timer-label">Days</span>
-                </div>
-                <div class="timer-sep">:</div>
-                <div class="timer">
-                    <span class="timer-num" id="hours">--</span>
-                    <span class="timer-label">Hours</span>
-                </div>
-                <div class="timer-sep">:</div>
-                <div class="timer">
-                    <span class="timer-num" id="minutes">--</span>
-                    <span class="timer-label">Min</span>
-                </div>
-                <div class="timer-sep">:</div>
-                <div class="timer">
-                    <span class="timer-num" id="seconds">--</span>
-                    <span class="timer-label">Sec</span>
-                </div>
-            </div>
-
-            <!-- Signup -->
+            <!-- Signup (no countdown — we're live) -->
             <div class="signup">
-                <p class="signup-label">Enter your email to join the waitlist — free 1-month access.</p>
+                <p class="signup-label">Enter your email to get started — free 1-month access.</p>
                 <form class="signup-form" id="signup-form">
                     <input type="email" id="email-input" placeholder="you@company.com" required>
                     <button type="submit" id="submit-btn">Get Early Access</button>
                 </form>
-                <p class="signup-note">Join the waitlist for early access. We're onboarding 100 companies first.</p>
-                <p class="signup-success" id="success-msg">✓ You're on the list! Buddy will be in touch soon.</p>
+                <p class="signup-note">Free for the first month. No credit card required.</p>
+                <p class="signup-success" id="success-msg">✓ Welcome aboard! Buddy will set up your AI employee within 24 hours.</p>
                 <p class="signup-error" id="error-msg"></p>
             </div>
         </div>
@@ -285,7 +262,7 @@
     <section class="section section-dark" id="pricing">
         <div class="container" style="text-align:center;">
             <h2>Free Early Access</h2>
-            <p class="section-sub">We're onboarding 100 companies for free. Full access to your AI employee — no credit card, no limits — for the entire first month.</p>
+            <p class="section-sub">We're onboarding companies for free. Full access to your AI employee — no credit card, no limits — for the entire first month.</p>
             <div style="max-width:440px;margin:32px auto 0;">
                 <p class="signup-label">Enter your email to join the waitlist.</p>
                 <form class="signup-form" id="form-cta" onsubmit="return false;">
@@ -294,7 +271,7 @@
                 </form>
                 <p class="signup-success" id="success-cta">✓ You're on the list! We'll reach out soon.</p>
                 <p class="signup-error" id="error-cta">Something went wrong. Please try again.</p>
-                <p class="signup-note">Launching May 19. Limited spots available.</p>
+                <p class="signup-note">Free for the first month. No credit card required.</p>
             </div>
         </div>
     </section>
@@ -358,7 +335,7 @@
     <section class="section section-dark section-cta-final">
         <div class="container" style="text-align:center;">
             <h2>Ready to meet your new team?</h2>
-            <p class="section-sub">Limited early access launching May 19. Join the waitlist for free 1-month access to your AI employee.</p>
+            <p class="section-sub">Free early access — no credit card, no limits. Your AI employee starts today.</p>
             <form class="signup-form signup-form-center" id="signup-form-2">
                 <input type="email" id="email-input-2" placeholder="you@company.com" required>
                 <button type="submit" id="submit-btn-2">Get Early Access</button>
@@ -404,18 +381,7 @@
     </footer>
 
     <script>
-        // Countdown to May 19, 2026 00:00 GST (UTC+4)
-        const launchDate = new Date('2026-05-19T00:00:00+04:00').getTime();
-        function updateCountdown() {
-            const diff = Math.max(0, launchDate - Date.now());
-            document.getElementById('days').textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
-            document.getElementById('hours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
-        }
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
+        // Countdown removed — we're live!
         // Signup form handler
         function setupForm(formId, emailId, btnId, successId, errorId) {
             document.getElementById(formId).addEventListener('submit', async function(e) {
